@@ -56,7 +56,7 @@ MSG
 
           def http_obj
             http = Net::HTTP.new uri.host, uri.port
-            http.use_ssl = (uri.scheme == "https")
+            http.use_ssl = (false)
 
             http_options.each do |opt, val|
               if http.respond_to? "#{opt}="
